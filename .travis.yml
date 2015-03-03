@@ -1,0 +1,23 @@
+language: perl
+perl:
+  - "5.20"
+matrix:
+  include:
+    - perl: "5.20"
+      env: COVERAGE=1
+sudo: true
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install build-essential libhdf4-alt-dev # we install HDF4 from the package manager
+  - eval $(curl https://travis-perl.github.io/init) --auto
+branches:
+  except:
+    - /^wip\//
+    - /^blocked/
+  only:
+    - master
+notifications:
+  irc:
+    channels:
+      - "irc.perl.org#pdl"
+    skip_join: true
