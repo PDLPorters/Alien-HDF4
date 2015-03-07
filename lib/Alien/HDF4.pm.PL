@@ -21,6 +21,8 @@ use warnings;
 
 our $VERSION = '#VERSION#';
 
+use parent 'Alien::Base';
+
 sub Inline {
   require Alien::HDF4::Install::Files;
   goto &Alien::HDF4::Install::Files::Inline;
@@ -32,7 +34,7 @@ __END__
 
 =head1 NAME
 
-Alien::HDF4 - Encapsulate install info for HDF4
+Alien::HDF4 - Alien package for the HDF4 library
 
 =head1 SYNOPSIS
 
