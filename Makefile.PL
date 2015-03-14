@@ -36,7 +36,7 @@ WriteMakefile(
   NAME	=> 'Alien::HDF4',
   VERSION => $version,
   MIN_PERL_VERSION => '5.010',
-  BUILD_REQUIRES	=> {
+  CONFIGURE_REQUIRES	=> {
     'IO::All'		=> 0,
     'ExtUtils::Depends'	=> '0.402',
   },
