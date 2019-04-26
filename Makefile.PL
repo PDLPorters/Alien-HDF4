@@ -54,6 +54,7 @@ WriteMakefile(
       },
     },
     resources => {
+      bugtracker  => {web=>'https://github.com/PDLPorters/Alien-HDF4/issues'},
       repository => {
 	type => 'git',
 	url => 'git://github.com/PDLPorters/Alien-HDF4',
