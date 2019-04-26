@@ -3,8 +3,7 @@ use strict;
 use warnings;
 use ExtUtils::MakeMaker;
 use Config;
-require 'common.pl';
-require 5.010;
+require './common.pl';
 
 my ($libpath, $libs) = findlibs();
 die <<EOF unless defined $libpath;
@@ -37,10 +36,6 @@ WriteMakefile(
   VERSION => $version,
   MIN_PERL_VERSION => '5.010',
   BUILD_REQUIRES	=> {
-    'IO::All'		=> 0,
-    'ExtUtils::Depends'	=> '0.402',
-  },
-  CONFIGURE_REQUIRES	=> {
     'IO::All'		=> 0,
     'ExtUtils::Depends'	=> '0.402',
   },

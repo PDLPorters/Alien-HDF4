@@ -1,0 +1,2 @@
+0.04 2019-04-26
+ - handle no . in @INC - thanks @wlmb for report
